@@ -82,8 +82,15 @@ router.put("/:email", (req, res) => {
 
 // DELETE request: Delete a friend by email id
 router.delete("/:email", (req, res) => {
+    const email = req.params.email;
     
-    res.send()
+    if (friends[email]) {
+        delete friends[email];
+        res.send(`Friend with the email ${email} delete.`);
+    } else {
+        res.send("Unable to find friend!");
+    }
 });
+    
 
 module.exports = router;
