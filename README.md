@@ -1,1 +1,1 @@
-# coding-project-template
+# In this lab, we have performed CRUD operations for the given user details on an Express server using Session & JWT authentication and tested them using Postman.
